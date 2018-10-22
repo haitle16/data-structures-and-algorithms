@@ -1,6 +1,6 @@
 'use strict';
 
-let LL = require('./insertions.js');
+let LL = require('./kthReverse.js');
 
 describe('Linked List', () => {
 
