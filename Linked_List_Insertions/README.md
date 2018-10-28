@@ -4,4 +4,4 @@ This contains three medthods of insertions in Linked List
 
 This assignment took me about 3 hours to write.
 
-![](/assets/ll_insertions.jpg)
+![whiteBoard](/assets/ll_insertions.jpg)
