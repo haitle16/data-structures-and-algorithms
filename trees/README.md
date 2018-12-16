@@ -7,7 +7,7 @@ Binary trees methods implemented
 - breathFirst
 
 ## Approach & Efficiency
-This project took me about 2 hours to get through.
+Added proper testing for breathfirst methods
 
 ## Solution
 ![](./asset/whiteboard.png)

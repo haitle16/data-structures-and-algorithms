@@ -1,0 +1,12 @@
+{
+  "name": "trees",
+  "version": "1.0.0",
+  "description": "<!-- Description of the challenge --> Binary trees methods implemented - preOrder - postOrde - inOrder - breathFirst",
+  "main": "bt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
