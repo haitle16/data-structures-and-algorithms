@@ -1,4 +1,4 @@
-import BinarySearchTree from 'trees/bt.js';
+const BinarySearchTree = require('trees/bt.js');
 
 describe('Binary Search Tree', () => {
   it('checking the output of pre order', ()=>{

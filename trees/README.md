@@ -7,7 +7,8 @@ Binary trees methods implemented
 - breathFirst
 
 ## Approach & Efficiency
-Added proper testing for breathfirst methods
+Added proper testing for breathfirst methods.
 
 ## Solution
-![](./asset/whiteboard.png)
+![](./asset/breathFirst.png)
+![](./asset/find_maximum_value_binary_tree.png)
