@@ -121,5 +121,27 @@ class BinarySearchTree {
 
     return results;
   }
+  findMaximumValue() {
+    let maxValue = 0;
+    let _walk = node => {
+      if(node.value > maxValue) {
+        maxValue = node.value;
+      }
+      if(node.left) {
+        _walk(node.left);
+        if(node.value > maxValue) {
+          maxValue = node.value;
+        }
+      }
+      if(node.right) {
+        _walk(node.right);
+        if(node.value > maxValue) {
+          maxValue = node.value;
+        }
+      }
+    };
+    _walk(this.root);
+    return maxValue;
+  }
 }
 module.exports = BinarySearchTree;
