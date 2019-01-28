@@ -53,7 +53,13 @@ class Hashmap {
    * @param key
    */
   contains(key) {
-
+    let hash = this.hash(key);
+    let target = this.map[hash];
+    if(target){
+      return true;
+    }else {
+      return false;
+    };
   }
 
   /**
@@ -65,16 +71,9 @@ class Hashmap {
       return hash;
     }
   }
-
-  // serialize() {
-
-  // }
-
-  // deserialize() {
-
-  // }
-
 }
+
+module.exports = Hashmap;
 
 let myhash = new Hashmap(14);
 myhash.add('John','Boss');
@@ -96,5 +95,7 @@ let findTest = myhash.Find('Ovi');
 console.log('FIND TEST',findTest);
 let GetHashTest = myhash.GetHash('Ovi');
 console.log('GETHASH  TEST', GetHashTest);
+let containTest = myhash.contains('Ovi');
+console.log('Contain test', containTest)
 
 console.log(util.inspect(myhash,{showHidden:false,depth:null}));
