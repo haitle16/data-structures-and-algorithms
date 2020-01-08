@@ -13,4 +13,4 @@
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![](./whiteboard01.jpg)
+![](../assets/array-reverse.jpg)
