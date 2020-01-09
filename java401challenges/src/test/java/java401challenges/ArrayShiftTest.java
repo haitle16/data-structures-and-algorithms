@@ -1,4 +1,4 @@
-package Java401challenges;
+package java401challenges;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
