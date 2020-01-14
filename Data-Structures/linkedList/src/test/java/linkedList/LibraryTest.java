@@ -22,30 +22,61 @@ public class LibraryTest {
         list.insert("1");
         list.insert("3");
         list.insert("5");
-        String expected = "{ 1 } -> { 3 } -> { 5 } -> NULL";
-        assertEquals(expected, list.toString());
+        String expected = "5";
+        assertEquals(expected, list.head.value);
     }
 
     @Test public void llHeadTest() {
         LinkedList list = new LinkedList();
-        list.insert("a");
+        list.append("a");
         String expected = "a";
         assertEquals(expected, list.head.value);
     }
 
     @Test public void includesMethodTest() {
         LinkedList list = new LinkedList();
-        list.insert("1");
-        list.insert("2");
-        list.insert("3");
-        list.insert("4");
-        list.insert("5");
-        list.insert("6");
-        list.insert("7");
+        list.append("1");
+        list.append("2");
+        list.append("3");
+        list.append("4");
+        list.append("5");
+        list.append("6");
+        list.append("7");
         assertEquals(true, list.includes("1"));
         assertEquals(true, list.includes("3"));
         assertEquals(true, list.includes("5"));
         assertEquals(true, list.includes("7"));
         assertEquals(false, list.includes("8"));
     }
+
+    @Test public void appendTest() {
+        LinkedList list = new LinkedList();
+        list.append("1");
+        list.append("3");
+        list.append("5");
+        String expected = "{ 1 } -> { 3 } -> { 5 } -> NULL";
+        assertEquals(expected, list.toString());
+    }
+
+    @Test public void insertBeforeTest() {
+        LinkedList list = new LinkedList();
+        list.append("1");
+        list.append("3");
+        list.append("2");
+        String expected = "{ 1 } -> { 5 } -> { 3 } -> { 2 } -> NULL";
+        list.insertBefore("3", "5");
+        assertEquals(expected, list.toString());
+    }
+
+    @Test public void insertAfterTest() {
+        LinkedList list = new LinkedList();
+        list.append("1");
+        list.append("3");
+        list.append("2");
+        String expected = "{ 1 } -> { 3 } -> { 5 } -> { 2 } -> NULL";
+        list.insertAfter("3", "5");
+        assertEquals(expected, list.toString());
+    }
+
+
 }
