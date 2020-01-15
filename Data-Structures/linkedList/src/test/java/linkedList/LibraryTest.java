@@ -3,10 +3,21 @@
  */
 package linkedList;
 
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+
 public class LibraryTest {
+    LinkedList list;
+    @Before
+    public void setUp(){
+        list = new LinkedList();
+        list.append("1");
+        list.append("3");
+        list.append("5");
+    }
+
     @Test public void testSomeLibraryMethod() {
         Library classUnderTest = new Library();
         assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
@@ -34,12 +45,8 @@ public class LibraryTest {
     }
 
     @Test public void includesMethodTest() {
-        LinkedList list = new LinkedList();
-        list.append("1");
         list.append("2");
-        list.append("3");
         list.append("4");
-        list.append("5");
         list.append("6");
         list.append("7");
         assertEquals(true, list.includes("1"));
@@ -50,33 +57,43 @@ public class LibraryTest {
     }
 
     @Test public void appendTest() {
-        LinkedList list = new LinkedList();
-        list.append("1");
-        list.append("3");
-        list.append("5");
         String expected = "{ 1 } -> { 3 } -> { 5 } -> NULL";
         assertEquals(expected, list.toString());
     }
 
     @Test public void insertBeforeTest() {
-        LinkedList list = new LinkedList();
-        list.append("1");
-        list.append("3");
-        list.append("2");
-        String expected = "{ 1 } -> { 5 } -> { 3 } -> { 2 } -> NULL";
-        list.insertBefore("3", "5");
+        String expected = "{ 1 } -> { 2 } -> { 3 } -> { 5 } -> NULL";
+        list.insertBefore("3", "2");
         assertEquals(expected, list.toString());
     }
 
     @Test public void insertAfterTest() {
-        LinkedList list = new LinkedList();
-        list.append("1");
-        list.append("3");
-        list.append("2");
-        String expected = "{ 1 } -> { 3 } -> { 5 } -> { 2 } -> NULL";
-        list.insertAfter("3", "5");
+        String expected = "{ 1 } -> { 3 } -> { 2 } -> { 5 } -> NULL";
+        list.insertAfter("3", "2");
         assertEquals(expected, list.toString());
     }
 
+    @Test
+    public void kthFromEndTest(){
+        list.append("2");
+        list.append("4");
+        System.out.println(list);
+        assertEquals("Testing k and length are the same ","1", list.kthFromEnd(4));
+        assertEquals("Testing negative value ","Exception!", list.kthFromEnd(-2));
+        assertEquals("Happy Paths ","5", list.kthFromEnd(2));
+    }
 
+    @Test (expected = NullPointerException.class)
+    public void kthFromEnd_ErrorTest(){
+        list.append("2");
+        list.append("4");
+        System.out.println(list.kthFromEnd(5));
+    }
+
+    @Test
+    public void kthFromEndTest_1size(){
+        LinkedList list1 = new LinkedList();
+        list1.append("5");
+        assertEquals("Test list with size 1","5", list1.kthFromEnd(0));
+    }
 }

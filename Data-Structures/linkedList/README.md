@@ -31,9 +31,13 @@
   * Time: O(n)
   * Space: O(n)
 * InsertAfter Method
-  * Similiar to the InsertBefore Method but instead of checking the next value of current node, check for the current node value.
+  * Similar to the InsertBefore Method but instead of checking the next value of current node, check for the current node value.
   * Time: O(n)
   * Space: O(n)
+* kthFromEnd Method
+  * Approached by saving 2 variables currentNode and lastNode, than move the last node over kth spot. Finally iterate over the Linked List moving currentNode and lastNode 1 by 1. Once the next last node hits end of LL, return the currentNode value.
+  * Time: O(n)
+  * Space O(n)
 ## API
 <!-- Description of each method publicly available to your Linked List -->
 * Insert Method
@@ -42,3 +46,4 @@
 * Append Method
 * InsertBefore Method
 * InsertAfter Method
+* kthFromEnd Method
