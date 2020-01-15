@@ -102,4 +102,23 @@ public class LinkedList {
         }
     }
 
+    public String kthFromEnd(int k){
+        Node currentNode = this.head;
+        Node last = this.head;
+        int counter = 0;
+        while(counter <= k-1){
+            last = last.next;
+            counter++;
+        }
+        while(last.next != null){
+            currentNode = currentNode.next;
+            last = last.next;
+            counter++;
+        }
+        if(k > counter || k < 0) return "Exception!";
+        return currentNode.value;
+    }
+
+
+
 }

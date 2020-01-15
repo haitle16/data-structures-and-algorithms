@@ -42,3 +42,4 @@
 * Append Method
 * InsertBefore Method
 * InsertAfter Method
+* kthFromEnd Method
