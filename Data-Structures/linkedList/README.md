@@ -7,6 +7,7 @@
 * Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
 * Define a method called toString which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
   "{ a } -> { b } -> { c } -> NULL"
+* Define a method called mergeLists which take two Linked Lists as arguments, zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -38,6 +39,9 @@
   * Approached by saving 2 variables currentNode and lastNode, than move the last node over kth spot. Finally iterate over the Linked List moving currentNode and lastNode 1 by 1. Once the next last node hits end of LL, return the currentNode value.
   * Time: O(n)
   * Space O(n)
+* mergeList Method
+  * Approached by saving 2 temp variables that save the next node of each lists. Than linked next node to the other list and linked it back to the temp node.
+
 ## API
 <!-- Description of each method publicly available to your Linked List -->
 * Insert Method
@@ -47,3 +51,4 @@
 * InsertBefore Method
 * InsertAfter Method
 * kthFromEnd Method
+* mergeList Method

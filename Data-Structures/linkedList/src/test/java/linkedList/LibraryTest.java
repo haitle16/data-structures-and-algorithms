@@ -96,4 +96,16 @@ public class LibraryTest {
         list1.append("5");
         assertEquals("Test list with size 1","5", list1.kthFromEnd(0));
     }
+
+    @Test
+    public void mergeListsTest(){
+        LinkedList listTwo = new LinkedList();
+        listTwo.append("2");
+        listTwo.append("9");
+        listTwo.append("4");
+        System.out.println(list);
+        System.out.println(listTwo);
+        LinkedList output = LinkedList.mergeLists(list,listTwo);
+        System.out.println(output);
+    }
 }

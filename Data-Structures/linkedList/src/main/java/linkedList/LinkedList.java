@@ -119,6 +119,26 @@ public class LinkedList {
         return currentNode.value;
     }
 
-
+    public static LinkedList mergeLists(LinkedList one, LinkedList two){
+        Node temp = one.head;
+        while(one.head != null || two.head != null){
+            Node oneTemp = one.head.next;
+            Node twoTemp = two.head.next;
+            one.head.next = two.head;
+            two.head.next = oneTemp;
+            one.head = oneTemp;
+            two.head = twoTemp;
+//            one.head.next = two.head;
+//            two.head.next = ;
+        }
+        one.head = temp;
+        System.out.println(temp.value);
+        System.out.println(temp.next.value);
+        System.out.println(temp.next.next.value);
+        System.out.println(temp.next.next.next.value);
+        System.out.println(temp.next.next.next.next.value);
+        System.out.println(temp.next.next.next.next.next.value);
+        return one;
+    }
 
 }
