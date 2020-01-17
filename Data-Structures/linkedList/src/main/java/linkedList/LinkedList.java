@@ -119,26 +119,41 @@ public class LinkedList {
         return currentNode.value;
     }
 
-    public static LinkedList mergeLists(LinkedList one, LinkedList two){
-        Node temp = one.head;
-        while(one.head != null || two.head != null){
-            Node oneTemp = one.head.next;
-            Node twoTemp = two.head.next;
-            one.head.next = two.head;
-            two.head.next = oneTemp;
-            one.head = oneTemp;
-            two.head = twoTemp;
-//            one.head.next = two.head;
-//            two.head.next = ;
+//    public static LinkedList mergeLists(LinkedList one, LinkedList two){
+//        Node temp = one.head;
+//        while(one.head != null || two.head != null){
+//            if(one.head == null) {
+//                System.out.println("TWO HEAD"+two.head.value);
+//                two.head = two.head.next;
+//            }else if(two.head == null){
+//                System.out.println("one HEAD"+one.head.value);
+//                one.head = one.head.next;
+//            }else {
+//                Node oneTemp = one.head.next;
+//                Node twoTemp = two.head.next;
+//                one.head.next = two.head;
+//                two.head.next = oneTemp;
+//                one.head = oneTemp;;
+//                two.head = twoTemp;
+//            }
+//        }
+//        one.head = temp;
+//        return one;
+//    }
+
+    // using recursive to merge LinkedList
+    public static LinkedList mergeLists(LinkedList list1, LinkedList list2){
+        list1.head = mergeNodes(list1.head, list2.head);
+        return list1;
+    }
+
+    public static Node mergeNodes(Node head1, Node head2){
+        if(head1 == null){
+            return head2;
+        } else {
+            head1.next= mergeNodes(head2, head1.next);
+            return head1;
         }
-        one.head = temp;
-        System.out.println(temp.value);
-        System.out.println(temp.next.value);
-        System.out.println(temp.next.next.value);
-        System.out.println(temp.next.next.next.value);
-        System.out.println(temp.next.next.next.next.value);
-        System.out.println(temp.next.next.next.next.next.value);
-        return one;
     }
 
 }

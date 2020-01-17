@@ -103,6 +103,8 @@ public class LibraryTest {
         listTwo.append("2");
         listTwo.append("9");
         listTwo.append("4");
+        listTwo.append("7");
+        listTwo.append("11");
         System.out.println(list);
         System.out.println(listTwo);
         LinkedList output = LinkedList.mergeLists(list,listTwo);
