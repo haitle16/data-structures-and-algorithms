@@ -47,4 +47,11 @@ public class StackTest {
         stack1.pop();
         assertTrue(stack1.isEmpty());
     }
+
+    @Test
+    public void stackLengthTest() {
+        assertEquals("should have length of 5", 5, stack1.length);
+        stack1.pop();
+        assertEquals("should have length of 4 after popping one", 4, stack1.length);
+    }
 }

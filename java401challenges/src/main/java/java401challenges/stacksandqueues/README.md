@@ -13,6 +13,9 @@
 * Queues
     * Time: O(n)
     * Space O(n)
+* PseudoQueue
+    * Time: O(1)
+    * Space O(n)
 
 ## API
 <!-- Description of each method publicly available to your Linked List -->
