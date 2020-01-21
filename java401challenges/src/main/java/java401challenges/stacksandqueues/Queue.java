@@ -24,6 +24,7 @@ public class Queue<T>{
         try{
             Node<T> current = front;
             front = front.next;
+            length--;
             return current.value;
         } catch(NullPointerException e){
             throw new NoSuchElementException("Empty queue, nothing to dequeue!");
