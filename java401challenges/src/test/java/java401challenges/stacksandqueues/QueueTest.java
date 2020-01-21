@@ -1,7 +1,7 @@
-package stackandqueues;
+package java401challenges.stacksandqueues;
 
 import org.junit.Before;
-import stacksandqueues.Queue;
+import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
@@ -16,6 +16,7 @@ public class QueueTest {
         queue = new Queue();
     }
 
+    @Test
     public void enqueueTest(){
         queue.enqueue(213);
         assertEquals(213, queue.peek().intValue());

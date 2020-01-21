@@ -1,6 +1,5 @@
-package linkedList;
+package java401challenges.linkedList;
 
-import java.io.*;
 import java.util.StringJoiner;
 
 public class LinkedList {
