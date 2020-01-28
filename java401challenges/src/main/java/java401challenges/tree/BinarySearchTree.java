@@ -1,6 +1,6 @@
 package java401challenges.tree;
 
-public class BinarySearchTree {
+public class BinarySearchTree extends Tree{
     public Node root;
 
     public int getSize (Node root) {
