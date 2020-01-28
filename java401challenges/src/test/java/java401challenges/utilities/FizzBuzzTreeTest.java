@@ -5,6 +5,7 @@ import java401challenges.tree.Tree;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 import static org.junit.Assert.*;
@@ -31,9 +32,7 @@ public class FizzBuzzTreeTest {
     }
         @Test
         public void fizzBuzzTree () {
-//            System.out.println(tree.traversefb(tree.root));
             System.out.println(tree.preOrder());
-            String tree2 = tree.traversefb(tree.root);
-            System.out.println(tree2);
+            assertEquals("Original tree [15, 2, 4, 5, 3, 6, 7] ","[FizzBuzz, 2, 4, Buzz, Fizz, Fizz, 7]", tree.traversefb(tree.root) );
         }
 }
