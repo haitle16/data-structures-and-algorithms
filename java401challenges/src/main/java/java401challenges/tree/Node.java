@@ -2,9 +2,9 @@ package java401challenges.tree;
 
 public class Node {
 
-    int value;
-    Node left;
-    Node right;
+    public int value;
+    public Node left;
+    public Node right;
 
     // Constructor
     public Node( int val) {

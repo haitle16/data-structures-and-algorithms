@@ -1,4 +1,4 @@
-package java401challenges.stacksandqueues;
+package java401challenges.utilities;
 import java.util.Stack;
 
 public class MultiBracketValidation {

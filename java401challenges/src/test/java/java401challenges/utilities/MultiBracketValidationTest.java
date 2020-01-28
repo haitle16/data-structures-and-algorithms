@@ -1,5 +1,6 @@
-package java401challenges.stacksandqueues;
+package java401challenges.utilities;
 
+import java401challenges.utilities.MultiBracketValidation;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
