@@ -17,3 +17,4 @@
 
 ## Solution
 <!-- Embedded whiteboard image -->
+![](../../../../../assets/fizzbuzz-tree.jpg)
