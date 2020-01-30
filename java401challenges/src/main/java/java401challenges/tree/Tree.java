@@ -85,6 +85,24 @@ public class Tree {
         return result;
     }
 
+    public int findMaxVal() {
+        int result = 0;
+        if(this.root != null) {
+            queue.enqueue(this.root);
+        }
+        while(!queue.isEmpty()){
+            if (this.root.value > result) {
+                result = this.root.value;
+            }
+            if(this.root.left != null){
+
+            }
+
+        }
+
+        return 0;
+    }
+
 
 
 
