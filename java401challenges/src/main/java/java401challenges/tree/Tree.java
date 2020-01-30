@@ -1,11 +1,15 @@
 package java401challenges.tree;
 
+import java401challenges.stacksandqueues.Queue;
+
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Tree {
     public Node root;
+    static Queue<Node> queue = new Queue<>();
+
 
     public int getSize (Node root) {
         if(root == null) {
@@ -59,6 +63,28 @@ public class Tree {
         }
         return result.toArray(new Integer[result.size()]);
     }
+
+    // Level Order
+
+    public List levelOrder() {
+        LinkedList<Node> result = new LinkedList<>();
+        if(this.root != null) {
+            queue.enqueue(this.root);
+        }
+        while(!queue.isEmpty()) {
+            Node current = queue.dequeue();
+            result.add(current);
+            if(current.left != null) {
+                queue.enqueue(current.left);
+            }
+            if(current.right != null) {
+                queue.enqueue(current.right);
+            }
+
+        }
+        return result;
+    }
+
 
 
 

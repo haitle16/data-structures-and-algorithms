@@ -7,8 +7,6 @@ import java.util.Stack;
 
 public class BinarySearchTree extends Tree{
     public Node root;
-    static Queue<Integer> queue = new Queue<>();
-
 
     public int getSize (Node root) {
         if(root == null) {

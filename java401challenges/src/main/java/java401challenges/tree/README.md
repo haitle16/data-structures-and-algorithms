@@ -19,6 +19,7 @@
 * inOrder method, recursively iterate through the tree and return an integer array with "Left - Root - Right" traversal.
 * preOrder method, returns "Root - Left - Right"
 * postOrder method, return "Left - Right - Root"
+* levelOrder method, return values of each level.
 * add method, adding integer value to the Binary Search Tree with its appropriate location.
 * contains method, return true or false if the element exist within the Binary Search Tree.
 
