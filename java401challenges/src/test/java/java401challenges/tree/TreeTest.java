@@ -70,6 +70,12 @@ public class TreeTest {
         assertArrayEquals(new Integer[]{4, 5, 2, 6, 7, 3, 1}, tree.postOrder());
     }
 
+    @Test
+    public void levelTest() {
+        System.out.println(tree.levelOrder());
+        assertEquals("[1, 2, 3, 4, 5, 6, 7]", tree.levelOrder().toString());
+    }
+
 
 
 
