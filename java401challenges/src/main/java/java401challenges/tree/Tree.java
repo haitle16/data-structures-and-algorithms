@@ -9,6 +9,7 @@ import java.util.List;
 public class Tree {
     public Node root;
     static Queue<Node> queue = new Queue<>();
+    int result;
 
 
     public int getSize (Node root) {
@@ -85,22 +86,32 @@ public class Tree {
         return result;
     }
 
+
     public int findMaxVal() {
-        int result = 0;
-        if(this.root != null) {
+        return this.findMaxVal(this.root);
+    }
+
+    public int findMaxVal(Node tree) {
+        if(tree == null) {
+            return tree.value;
+        }else {
+            int max = tree.value;
             queue.enqueue(this.root);
-        }
-        while(!queue.isEmpty()){
-            if (this.root.value > result) {
-                result = this.root.value;
+            while(!queue.isEmpty()) {
+                Node current = queue.dequeue();
+                if(current.left != null) {
+                    queue.enqueue(current.left);
+                }
+                if(current.right != null) {
+                    queue.enqueue(current.right);
+                }
+                if(current.value > max) {
+                    max = current.value;
+                }
+//                max = current.value > max ? current.value : max;
             }
-            if(this.root.left != null){
-
-            }
-
+            return max;
         }
-
-        return 0;
     }
 
 

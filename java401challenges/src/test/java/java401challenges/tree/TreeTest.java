@@ -76,6 +76,17 @@ public class TreeTest {
         assertEquals("[1, 2, 3, 4, 5, 6, 7]", tree.levelOrder().toString());
     }
 
+    @Test
+    public void findMaxValTest() {
+        System.out.println(tree.findMaxVal());
+        Tree tree3 = new Tree();
+        tree3.root = new Node(10);
+        tree3.root.left = new Node(2, new Node(7),new Node(46));
+        tree3.root.right = new Node(22, new Node(27), new Node(42));
+        assertEquals(7, tree.findMaxVal());
+        assertEquals(46, tree3.findMaxVal());
+    }
+
 
 
 
