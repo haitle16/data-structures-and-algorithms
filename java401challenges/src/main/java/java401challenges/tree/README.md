@@ -22,6 +22,7 @@
 * levelOrder method, return values of each level.
 * add method, adding integer value to the Binary Search Tree with its appropriate location.
 * contains method, return true or false if the element exist within the Binary Search Tree.
+* findMax method, iterate through the tree and return the max value of the binary tree.
 
 ## Test
 * Can successfully instantiate an empty tree
@@ -30,5 +31,6 @@
 * Can successfully return a collection from a preorder traversal
 * Can successfully return a collection from an inorder traversal
 * Can successfully return a collection from a postorder traversal
+* Can successfully return correct value despite the size of the array.
 
 
