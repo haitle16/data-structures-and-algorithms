@@ -28,3 +28,19 @@ Sample Array: [8, 4, 23, 42, 16, 15]
 * At the end of this iteration, the array should return [4, 8, 23, 42, 16, 15]
 
 ##### Pass 2: 
+* i = 2, j = 1, temp = 23
+* Second pass through we evaluate temp to the last value at current position j. In this case 23 is greater than so it would just skip the while loop.
+
+##### Pass 3: 
+* i = 3, j = 2, temp = 42
+* Third pass through we evaluate temp to the last value at current position j. Temp is greater than so it just skip through.
+
+##### Pass 4:
+* i = 4, j = 3, temp = 16
+* Fourth pass through temp is less than the previous value, which is 42. 16 and 42 "swapped". Than it decrement j and check if 16 i less than 23, which is true so it "swap" again.
+
+##### Pass 5:
+* i = 5, j = 4, temp = 15
+* On its last iteration through the for loop, pass 5 evaluate temp to the its previous value which is 42. Than it get "swap" and do the comparison again with 23 "swap", than 16 and "swap"
+
+![](./assets/insertionSort.jpg)
