@@ -1,7 +1,6 @@
 package java401challenges.utilities;
 
 import java401challenges.tree.Node;
-import java401challenges.tree.Tree;
 import org.junit.Before;
 import org.junit.Test;
 
