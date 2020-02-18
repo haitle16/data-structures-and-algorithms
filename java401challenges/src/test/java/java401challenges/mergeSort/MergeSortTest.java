@@ -4,6 +4,8 @@ import java401challenges.insertionSort.InsertionSort;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 public class MergeSortTest {
@@ -13,9 +15,8 @@ public class MergeSortTest {
     @Test
     public void mergeSortTest() {
         int[] arr = new int[] {8,4,42,23,16,15};
-//        mergeSort.mergeSort(arr);
-        System.out.println(mergeSort.mergeSort(arr));
-
+        mergeSort.mergeSort(arr);
+        assertArrayEquals(new int[] {4,8,15,16,23,42},arr);
     }
 
 
