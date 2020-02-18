@@ -19,5 +19,12 @@ public class MergeSortTest {
         assertArrayEquals(new int[] {4,8,15,16,23,42},arr);
     }
 
+    @Test
+    public void merSortEmptyTest() {
+        int[] arr = new int[]{};
+        mergeSort.mergeSort(arr);
+        assertArrayEquals(new int[]{}, arr);
+    }
+
 
 }
