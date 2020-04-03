@@ -1,6 +1,9 @@
 package java401challenges.graph;
 
 
+import java401challenges.stacksandqueues.Node;
+import java401challenges.stacksandqueues.Queue;
+
 import java.util.*;
 
 public class Graph<T> {
@@ -41,8 +44,32 @@ public class Graph<T> {
             throw new IllegalArgumentException("Node doesn't exist within the graph.");
         }
         return nodes.get(node);
+    }
+
+    public List<T> breadthFirst(T node) throws IllegalArgumentException {
+        if(!nodes.containsKey(node)) {
+            throw new IllegalArgumentException("Node doesn't exist within the graph.");
+        }
+        HashSet<T> seenNodes = new HashSet<>();
+        List<T> results = new ArrayList<>();
+        Queue<T> processQueue = new Queue<>();
+
+        processQueue.enqueue(node);
+        while(!processQueue.isEmpty()) {
+
+            T current = processQueue.dequeue();
+            if(seenNodes.contains(current)) {
+                seenNodes.add(current);
+                results.add(current.);
+                for(T neighbor : current.)
+            }else {
+                break;
+            }
+        }
 
     }
+
+
 
 }
 
